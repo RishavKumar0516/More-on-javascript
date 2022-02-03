@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align:center;
+}
+h2{
+    padding:30px 50px;
+    text-align:center;
+}
+
+/* creating grid */
+
+.container{
+    padding:30px 0px;
+    display:grid;
+    grid-template-rows:repeat(3,170px);
+    grid-template-columns:repeat(4, 250px);
+    grid-gap:10px;
+    justify-content:center;
+   
+    background:rgb(182, 109, 109);
+}
+.container .item{
+    box-shadow:0px 0px 1px 3px rgb(12, 11, 11);
+    /* background:indianred;  */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /* font-size:25px; */
+    /* color:#f2f2f2; */
+    transition:1s;
+}
+.container .item:nth-child(1){
+    grid-column:1/span 2;
+    grid-row:1/span 1;
+}
+.container .item:nth-child(2){
+    grid-column:3/span 1;
+    grid-row:1/span 2;
+}
+.container .item:nth-child(3){
+    grid-column:4/span 1;
+    grid-row:1/span 1;
+}
+.container .item:nth-child(4){
+    grid-column:1/span 1;
+    grid-row:2/span 2;
+}
+.container .item:nth-child(5){
+    grid-column:2/span 1;
+    grid-row:2/span 1;
+}
+.container .item:nth-child(6){
+    grid-column:2/span 2;
+    grid-row:3/span 1;
+}
+.container .item:nth-child(7){
+    grid-column:4/span 1;
+    grid-row:2/span 2;
+}
+
+.buttons{
+    width:100%;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+button{
+    padding:0 10px;
+    height:50px;
+    width:140px;
+    margin:0 10px;
+}
+
+/* creating class to see some changes */
+
+.class1{
+    color:rgb(164, 12, 235);
+    background:rgb(95, 182, 216);
+    border-radius:50px;
+    box-shadow:none;
+}
+.class2{
+   
+    font-size:40px;
+    font-family:cursive;
+    color:rgb(226, 21, 21);
+}
+.class3{
+    background:linear-gradient(140deg,rgb(216, 65, 158), rgb(255, 230, 0));
+}
+.active{
+    color:#c5bdbd;
+    font-size:30px;
+    text-shadow:1px 1px 3px 4px rgb(230, 53, 186),1px 3px 2px 2px rgb(176, 230, 53);
+    background-image:url("../pexels-francesco-ungaro-281260.jpg");
+    background-size:cover;
+    background-position:center;
+}

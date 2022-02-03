@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> date and time in javascript  </title>
+<style>
+    .container{
+        font-size:23px;
+        background:hotpink;
+        border:2px solid grey;
+        padding:34px;
+        margin:4px;
+        text-align:center;
+    }
+    #time{
+        font-weight:bold;
+    }
+    #hours{
+        font-weight:bold;
+    }
+    #minute{
+        font-weight:bold;
+    }
+</style>
+</head>
+<body>
+ <div class="container">
+
+
+     Current time is <span id="time"> </span>
+ </div>
+ <div class="container">
+     current time is <span id="hoursclock"></span>hours and <span id="minuteclock"></span> minute.
+ </div>
+
+
+ <script>
+      
+      console.log("this is date and time");
+
+
+      /* 
+          --------------about new Date constructor------------------
+
+
+          By default, JavaScript will use the browser's time zone and display a date as a full text string:
+  
+          Tue Jun 29 2021 19:56:54 GMT+0530 (India Standard Time)
+
+          Date objects are created with the new Date() constructor.
+          
+          the objects of date is created using new Date() constructor.
+
+          There are 4 ways to create a new date object:
+
+          1. new Date()
+          2. new Date(year, month, day, hours, minutes, seconds, milliseconds)
+          3. new Date(milliseconds)
+          4. new Date(date string)
+
+
+          *** "new Date() creates a new date object with the current date and time:""
+
+      */
+
+
+      // *** "new Date() creates a new date object with the current date and time:"
+
+      let dt1 = new Date();  // storing the Date object in dte1.
+      console.log(dt1);
+
+      let dt2 = new Date(1000);  /// storing the Date object in dte2.
+      console.log(dt2);
+
+      
+
+      let newdate = new Date("2029-09-30");  // storing the Date object in newdate.
+      console.log(newdate);
+
+
+
+
+      //  let newDate = new Date(year, date, hours, minutes, second, millisecond);
+
+      //new Date(year, month, ...) creates a new date object with a specified date and time.
+
+    //7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):
+
+      let newdate2 = new Date(3020, 4, 6, 9, 3, 2, 34); // storing the Date object in newdate2.
+      console.log(newdate2);
+
+      // some predefined function :-
+
+   //  The function getFullYear() returns you the year form the given Date object.
+      let yr1 = newdate2.getFullYear();
+      console.log("this year is ",yr1);
+
+      let date3 = newdate2.getDate();  // these function returns you the date from from the Date object
+      console.log("this date is ", date3);
+      
+      let month = newdate2.getMonth();// these function returns you the month from from the Date object
+      console.log("this month is ",month);
+
+      let days = newdate2.getDay();// these function returns you the day from from the Date object
+      console.log("this day is ",days);
+
+      let hours = newdate2.getHours();// these function returns you the hours from from the Date object
+      console.log("this hours is ",hours);
+
+      let minute = newdate2.getMinutes();// these function returns you the minute from from the Date object
+      console.log("this minute is ",minute);
+
+      let second = newdate2.getSeconds();// these function returns you the second from from the Date object
+      console.log("this second is ",second);
+
+      let millisecond = newdate2.getMilliseconds();// these function returns you the milli second from from the Date object
+      console.log("this milli second is ",millisecond);
+
+      // To set the new date in the Date object which is stored in newdate2 object, we use
+      newdate2.setDate(5); // These function change the date of the object.
+      console.log(newdate2);
+
+      // To set the new hours in the Date object which is stored in newdate2 object, we use
+      newdate2.setHours(8); // These function change the hours of the object.
+      console.log(newdate2);
+
+      // To set the new date in the minute object which is stored in newdate2 object, we use
+      newdate2.setMinutes(58); // These function change the minute of the object.
+      console.log(newdate2);
+
+      // To set the new date in the month object which is stored in newdate2 object, we use
+      newdate2.setMonth(7); // These function change the month of the object.
+      console.log(newdate2);
+
+      newdate2.setDate(39); // These function change the date of the object. and if you pass the wrong date then, it will auto correct it.
+      console.log(newdate2);
+
+      let dt6 = new Date(1000);  /// storing the Date object in dte2.
+      console.log(dt6);
+      let timespend=Date.now();// these returns the current time stemp in millisecond, time stemps means, the time spend from (Jan 01 1970 05:30:01 GMT+0530) to the time today.
+      console.log(timespend);
+
+
+     
+
+      // to show time in the DOM
+
+      setInterval(updatetime, 1000);  //These 
+
+      function updatetime(){
+          time.innerHTML = new Date();
+      }
+
+      function minutes(){
+         newdate2 = new Date();
+        let minute = newdate2.getMinutes();
+        minuteclock.innerHTML = minute;
+        
+      }
+
+      function hou(){
+         newdate2 = new Date();
+         let hours = newdate2.getHours();
+        hoursclock.innerHTML = hours;
+       
+      }
+      setInterval(minutes, 1000);
+      setInterval(hou, 1000);
+      
+
+
+
+ </script>
+
+
+
+</body>
+</html>

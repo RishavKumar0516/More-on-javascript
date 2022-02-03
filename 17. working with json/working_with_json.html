@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with json</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Working with json</h1>
+    </div>
+
+
+
+    <script>
+console.log("working with json");
+        /*
+        JSON stands for JavaScript Object Notation
+
+JSON is a lightweight format for storing and transporting data
+
+JSON is often used when data is sent from a server to a web page
+
+JSON is "self-describing" and easy to understand
+*/
+
+
+// creating object
+let jsonObj = {
+    name: "rishav",
+    channel: "code with harry",
+    friend: "shivam",
+    food: "cauliflower"
+}
+console.log(jsonObj);
+
+//JSON.stringify() convert valid javascript object in to string.
+let myjsonStr = JSON.stringify(jsonObj);// these convert object in strings and string called json string.
+console.log(myjsonStr);
+
+// after converting the javascrpit object to string, you can apply all strings methods on it.
+
+//If we want to replace the cauliflower with brinjal then we use,
+
+myjsonStr = myjsonStr.replace('cauliflower', 'brinjal');
+
+console.log(myjsonStr);
+
+myjsonStr = myjsonStr.replace('Harry', 'rishav');
+
+console.log(myjsonStr);
+
+myjsonStr = myjsonStr.replace('code with harry', 'fundamental tech');
+
+console.log(myjsonStr);
+
+
+// again converting the json string to object.
+
+//  JSON.parse()   takes valid jsonstring and convert in valid javascript object.
+let newJsonObj = JSON.parse(myjsonStr);  // converting new updated json-string in to objects
+console.log(newJsonObj);
+
+//if a string is not a valid json string then, it will not return the object, it returns error message.
+
+
+// let str = "rishav";
+// let object3 = JSON.parse(str);
+// console.log(object3);  // these give you error message.
+   
+let array = new Array("we are the pepole");/* here these is not json string, so we are converting the array in string. */
+console.log(array);
+let arrayObj = JSON.stringify(array);
+console.log(arrayObj);
+arrayObj = JSON.parse(arrayObj);
+console.log(arrayObj);
+
+    </script>
+
+
+</body>
+</html>

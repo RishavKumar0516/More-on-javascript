@@ -1,0 +1,15 @@
+[       
+    { "file" : "these is array of object"},        
+{
+    "name" : "rishav",
+    "age" : 22,
+    "id" : 12345678,
+    "file" : "these is object"
+},
+{
+    "name" : "rishav",
+    "age" : 22,
+    "id" : 12345678,
+    "file" : "these is object"
+}
+]

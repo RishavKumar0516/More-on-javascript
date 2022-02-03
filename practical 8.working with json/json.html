@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>working with json</title>
+</head>
+<body>
+    <div class="container">
+
+
+    </div>
+
+    <script>
+
+        let JSONobj ={
+            name : "rishav",
+            channel : "code with us",
+            channel2 : "fundamental tech",
+            food : "cauliflower",
+            sports : "cricket",
+        }
+
+        console.log(JSONobj);
+
+        let myjsonstr = JSON.stringify(JSONobj);
+
+        myjsonstr = myjsonstr.replace("cauliflower", "brinjal");
+        myjsonstr = myjsonstr.replace("rishav", "harry");
+        myjsonstr = myjsonstr.replace("cricket", "football");
+        console.log(myjsonstr);
+
+        let newobj = JSON.parse(myjsonstr);
+        console.log(newobj);
+    </script>
+</body>
+</html>

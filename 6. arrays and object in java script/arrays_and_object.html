@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays and object</title>
+</head>
+<body>
+    <div class="container">simple si html</div>
+    <script>
+
+        //in javascript values are of to types.
+        // 1. primitive
+        // 2. objects
+
+
+        // types of primitive datatypes.
+        let myvar1 = 34;         // integers
+        let myvar2 = 34.555;     // float
+        let myvar3 = "strings";  // string 
+        let myvar4 = true;       // boolean
+        let myvar5 = null;        // null
+        let myvar6 = undefined;   //undefined  - these means these variable contains not any value.
+
+
+        // objects -store keyvalues pair.
+
+        let employee = {              // objects contain more then one keys of   different-different data-types. 
+            name : "rishav",
+            salary : 100,
+            channel : "fundamental tech",
+            channel2 : "programming with rishav",
+
+        }
+        console.log(employee);
+
+        // if you want to add space in keys name then write as Ex - 
+
+        //     " channel 2":"programming with rishav";
+        //and to access 
+
+        //how to access the elements of objects.
+
+        // to access the elements of objects we use 2 methods
+
+        // 1. object_name.keys_name
+           console.log(employee.name);
+           console.log(employee.channel);
+           console.log(employee.channel2);
+           console.log(employee.salary);
+         
+
+           // 2.  object_name['keys_name']
+           console.log(employee['name']);
+           console.log(employee['channel']);
+           console.log(employee['channel2']);
+           console.log(employee['salary']);
+
+        let names = [ 1, 2, 3, 4, "rishav", "raj", undefined]// these is an array ,array is also an object, these can store different values of different datatypes.
+        //it can store integer value, float value, string, boolean,undefined, and null.
+
+        console.log(names);
+        console.log(names[0]);
+        console.log(names[1]);
+        console.log(names[2]);
+        console.log(names[3]);
+
+        // why we are learning arrays?
+
+    // ans -  sometime if we search anything in our DOM(html) ,then we get array in return.
+
+    //if we search for the video in html then we get video in arrays, we get arrays of video in return and we can itterate the array to use the any operation on  element(video).
+
+    // we can also create arrays using keyword "new Array"
+
+    let name2 = new Array( 1, 2, 3, 4, "rishav", "raj", undefined);
+    console.log(name2);
+    console.log(name2.length);  // these return the length of the array.
+     
+    // to sort the array we use( .sort )
+
+    name2 = name2.sort();
+    console.log(name2);
+
+    // if you want to insert the element at the end then use method push().
+
+    name2.push('this is pushed');
+    console.log(name2);
+
+    let name3 = new Array(23);  // these creates an array of size 23 elemnets 
+    console.log(name3.length);  
+    name3 = name3.sort();       // inserting single elemnt at last.
+     name3.push("this is pushed");
+    console.log(name3);
+    console.log(name3.length);
+
+    </script>
+</body>
+</html>

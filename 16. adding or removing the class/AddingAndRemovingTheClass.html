@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding and removing the class</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h2> Adding And Removing the class using the java-script </h2>
+
+    <div class="container">
+        <div class="item">this is item-1</div>
+        <div class="item">this is item-2</div>
+        <div class="item">this is item-3</div>
+        <div class="item">this is item-4</div>
+        <div class="item">this is item-5</div>
+        <div class="item">this is item-6</div>
+        <div class="item">this is item-7</div>
+    </div>
+
+    <div class="buttons">
+    <button onclick="change()">add single class</button>
+    <button onclick="change2()">add multiple class</button>
+    <button onclick="change3()">remove single class</button>
+    <button onclick="change4()">remove multiple class</button>
+    <button onclick="change5()">toggle</button>
+    <button onclick="change6()">contains</button>
+    </div>
+
+
+
+    <script>
+
+         /*  we can grab the array of elements using class name and tag name */
+
+         let add = document.querySelectorAll(".container > div");/* these returns the array of all  div's element which is child of container class and lies inside the container.  */
+
+         // let add = document.querySelectorAll(".item");    /* these return the array of all those element whose class is item. */
+
+
+
+        /* adding single class to the element */
+        function change(){
+
+            add[0].classList.add("class1");  /*  we are grabbing each element of the array and adding a another class to it. */
+           
+        }
+
+        /* addding the multiple class to the element */
+
+        function change2(){
+            add[1].classList.add("class1", "class2", "class3");
+        }
+
+
+        /* remove single class  */
+        function change3(){
+            add[0].classList.remove("class1");
+        }
+
+
+        /* remove multiple class  */
+        function change4(){
+            add[1].classList.remove("class1", "class2", "class3");
+        }
+
+
+        /*  toggle :- if the specified class is already added then it remove those class and, if the class is not added already then it adds the specified class */
+
+        function change5(){
+            add[3].classList.toggle("active");
+        }
+
+
+//    contains  :-     Returns a Boolean value, indicating whether an element has the specified class name.
+// Possible values:
+
+// true - the element contains the specified class name
+// false - the element does not contain the specified class name
+
+         function change6(){
+            if(add[3].classList.contains("active")){
+                alert(`yes these contains "active" class.`);
+                add[4].classList.add("class3");
+            }else{
+                alert(`no these do not contains "active" class.`);
+                add[4].classList.remove("class3");
+            }
+         }
+
+    </script>
+</body>
+</html>

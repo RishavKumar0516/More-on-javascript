@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+    <div class="container">
+        <h1> loops</h1>
+        <h3 id="para"></h3>
+    </div>
+
+     
+    <script>
+
+        for(let i=0;i<7;i++){
+         console.log("The number is ", i);
+        }
+
+        let arrays1 = [1, 2, 3, 4, 5 , " rishav ", " kumar ", " raj ", " son "];
+
+        for(let i=0; i<arrays1.length;i++){
+
+            console.log(arrays1[i]);
+        }
+
+        //forEach() ------------
+
+        let friends = new Array("harry", "rohav", "navdeep", "little", "sonu");
+        
+
+        friends.forEach(function name(element){
+            console.log(element);
+           
+        });
+        
+        friends.forEach(function name2(element){
+            para.innerHTML = element;
+        });
+
+        //  ---------------------for of loops-------------------------
+        
+        for( ele of friends){
+            console.log("Hello friends, I am " + ele + " a regular boy");
+        }
+
+        let salary = [45, 34, 23, 89, 67, 56, 78];
+
+        for( amount of salary){
+            console.log(" The salary my employeer is as ",amount);
+        }
+
+        let employee = {
+              name : "rishav",
+              salary : "345",
+              channel : "fundamental tech",
+              friend : "navdeepshivam"
+        }
+        
+      
+
+        for( key in employee){
+            console.log(`the ${key} of employee is ${employee[key]}`);
+        }
+        
+        let student = {
+            name : "rishav kumar",
+            class : "XII",
+            "roll no" : "0177EC191086",
+            "pet name" : "mohan",
+        }
+
+        for( let property in student){
+            console.log(`The ${property} of student is ${student[property]}`);
+        }
+
+        let numbers =[34, 45, 56, 67, 76, 78, 90];
+        for(let x in numbers){
+            console.log(numbers[x]);
+        }
+
+
+
+        
+    </script>
+
+
+</body>
+</html>

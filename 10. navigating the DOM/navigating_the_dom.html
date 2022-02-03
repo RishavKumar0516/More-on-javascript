@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigating the DOM</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <h1>This is container</h1>
+        <ul id="navbar">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>More About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+
+    <div class="container">Another container</div>
+
+
+    <script>
+
+        // grabbing the element  
+
+
+
+        //grabbin element using id
+
+        let main = document.getElementById('main');// these (documnet.getElementById) is used to grab the element whose id is main. It is used to select the element using id.
+        console.log(main);
+        let nav = document.getElementById('navbar');// these is used to grab the element whose id is navbar. It is used to select the element using id.
+        console.log(nav);
+
+        //nav.innerHTML = main.innerHTML;// using innerHTML we change the content of element.
+
+        //grabbing the element using class.
+
+        let grabclass = document.getElementsByClassName('container'); //It is used to select the element using class.
+        //when grabbing or selecting the element using class, it return all the element whose class is same.it returns the arrays of element whose class is same.
+        console.log(grabclass);
+
+       // grabbing the single element using css selector. It is used to select single  element.
+
+       let sel = document.querySelector('.container');  // the first element which matches with these selector get returned.
+       //jo bhi pehla element es selector sai match karega wo return ho gaye ga,or usaay grab ker laega.
+       // In these case we said, to return the first element whose class is 'container'.
+       console.log("selector returns" + " " + sel);
+
+       let sel2 = document.querySelector('#navbar');// In these case we said, to return the first element whose id is 'navbar'.
+       console.log("selector returns" + " " + sel2);
+
+       let sel3 = document.querySelector('#navbar>li');// In these case we said, to find the first element whose id is 'navbar' and returns the first child 'li' element of navbar.
+       console.log("selector returns" + " " + sel3);
+
+       sel3.innerHTML = "<li> remember me </li>";
+
+       // grabbing all those element using css selector which matched with element. It is used to select more then one element.
+
+       let sel4 = document.querySelectorAll('#navbar>li');// these gonna returns all matching element.
+         // In these case we said to find the element whose id is navbar and return all 'li'     element which is inside of navbar, in the form of array.
+
+       console.log(sel4);
+       
+       //sel4[2].innerHTML = "<li> think About Me </li>";
+       sel4[2].innerHTML = "<li> think About Me </li>";
+       sel4[3].innerHTML = "<li> Time is importaint </li>";
+       sel4[4].innerHTML = "<li> use light to be bright </li>";
+
+
+
+
+
+
+
+     </script>
+</body>
+</html>

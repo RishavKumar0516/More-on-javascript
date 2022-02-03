@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction With Alert, prompt and confirm </title>
+   <style>
+
+   </style>
+</head>
+<body>
+
+    <div class="container">
+        This is a page.
+    </div>
+
+
+
+
+    <script>
+        
+
+        // alert in in-browser in javascript.
+
+        alert("This is a message");  // these take argument as a string and create a pop up message box.
+        // these does not return anything.
+
+
+        // prompt in in-browser in javascript. 
+    
+        let name = prompt("WHA IS YOUR NAME ?", "Guest");  //these create a pop-up box and ask the input from the user. these return the value inputed by the user. here we are passing the guest as default value.
+        console.log(name);
+
+        let age = prompt("Please enter your the age? ","age");
+
+        if(age > 18){
+            console.log("your are mostly welcome in the bar");
+        }
+        else{
+            console.log("you cannot get entry in the bar,you are to small for these.")
+        }
+
+        // confirm in in-browser in javascript.
+
+         let deletepost = confirm("Do you really want to delete the post?");    // these confirm returns either true or false,if we do 'ok', then it will return true, if you do 'cancel', then returns false.
+         console.log(deletepost);
+
+        //we use confirm when you are deleting some file, or you want to give warning to the user,so to double check we use confirm.
+
+        if(deletepost){
+            console.log(" Your post has been deleted sucessfully ");
+        }
+        else{
+            console.log(" Your post has been not deleted! ");
+        }
+
+    </script>
+</body>
+</html>

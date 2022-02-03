@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string function</title>
+</head>
+<body>
+    <div class="container">
+  <h1>String Function</h1>
+    </div>
+
+    <script>
+        let str = "This is a string. loren Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua loren. ";
+        console.log(str);
+
+        let position = str.indexOf('string');
+        console.log(position);
+
+        console.log(str.indexOf('loren'));
+
+        let position2 = str.lastIndexOf('loren');
+        console.log(position2);
+
+        console.log(str.indexOf('olo'));
+        console.log(str.lastIndexOf('olo'));
+
+        console.log(str.slice(1,7));
+        console.log(str.slice(54,120));
+
+        console.log(str.substr(0,9));
+        console.log(str.substr(50,100));
+
+        str = str.replace("loren","rishav");
+        console.log(str);
+        str = str.replace('dolor','rupees');
+        console.log(str);
+
+        str = str.toUpperCase();
+        console.log(str);
+
+        str = str.toLowerCase();
+        console.log(str);
+
+        str = str.concat("hey your are looking awesome in these clothes, would you please come with me for a cup of cofee.");
+        console.log(str);
+
+        
+
+
+
+
+        
+       
+
+    </script>
+</body>
+</html>

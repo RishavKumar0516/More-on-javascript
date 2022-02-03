@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script strings and strings methods</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Lorem ipsum dolor sit amet
+        </h1>
+        <div id="content"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o
+        Duis  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+        fugiat nulla pariatur.
+        </p>
+
+        <h2>in java-script we manily use strings and strings function to do some changing in html (DOM)</h2>
+
+    </div>
+    <script>
+        var string="this is ";
+        var string2='rishav ';
+        console.log(string);   //for defining the string we use both single (' ') and double (" ") quote.
+        console.log(string2);
+         //   when to use double quote qnd single qoute.
+
+         //when you are going to use the double quote inside the strings then place your string inside the single quote.
+        var s1="when i saw her, she is looking very 'beautiful' in a newly dress. "
+        console.log(s1);
+         //when you are going to use the single quote inside the strings then place your string inside the double quote.
+
+         var s2='she looks very "pretty" and "loving" '
+         console.log(s2);
+
+           //when you are going to use the single quote inside the strings then do not  place your string inside the single quote either you will see error messages.
+
+           //when you are going to use the double quote inside the strings then do not  place your string inside the double quote either you will see error messages.
+
+           //var s3="I am rishav and a"handsome" guy";
+           // console.log(s3);
+
+           console.log(string + string2 + s1 + s2);
+
+           var name ='rishav';
+           var channel = "fundamental tech";
+           // if you want to use the double and single quote in same line then use backticks(`content`) and inside backticks put your content.
+
+           var temp = ` "${name}" is a Nice person and he has a channel called '${channel}'. `;
+           // whenever we use ${dolor} symbol and variable inside them, it creates blank space in your strings and filled later.
+           //if you want to create a long template and you want to fill these later then use ${string}.
+           console.log(temp);
+
+           // to find the length of strings use variable-name.length
+
+           var len=name.length;
+           console.log(`Length of name is "${len}"`);
+
+           //you can use new-line character(\n) to start from new line.
+           //you can use \t  to move the cursor 1 tab horizental.
+           //you can use \\ to produce single back slash or i you want to print any new symbol then use single back slash followed by symbol.
+
+           console.log("hello \\nworld \n rishav \t and \\kumar\\");
+
+           //you can also create string using string constructor but don't use them.
+
+           var y =new String('this');
+           console.log(y);//so don't use strings constructor use only simply way to create strings.
+
+          document.getElementById('content').innerHTML='<h3> this is a h3 heading </h3>';//these grab the element with id = content and insert the content .
+
+    </script>
+</body>
+</html>

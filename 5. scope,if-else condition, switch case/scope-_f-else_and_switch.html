@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope if-else condition and switch case</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+        </ul>
+    </div>
+    <script>
+        var string1 = 'This is a string';
+        console.log(string1);
+        var string1 = "this";// here you can see these if we redeclare the string1 again, then the content of the string get changed.  the scope of keyword var is global.
+
+        //  so  if we declare a variable using keyword "var" out side of any function then we can access those variable from any function, and update the global variable from the any function...lets see.
+
+        function check(){
+         
+            var string2="this is a rishav";// but if we declare a variable using 'var ' inside a function then scope of that variable is inside function only.
+            console.log(string2);
+        }
+
+
+        //  we can declare the variable using another keyword called "let" .
+        // if we create a blog and declare the variable inside the blog then,scope of the variable is within block only.
+        let a = "u";// these is a global variable.
+
+
+        //let a = "u";        // if here we again declare the same variable then we get error message,that you have alredy declared same variable.
+
+        {   // this is a block.
+
+          //local variable of these block.
+            let a='p';  // here we get any error ,these is a local variable whose scope is inside the block only, we cannot use these local variable out side these block.
+            
+            console.log(a); // these will output local variable a.
+        }
+        console.log(a);  // these will output global variable a.   you cannot access local variable outside the block.
+
+
+        // from now onwards we use keyword let to declare the variable.
+
+        const b = "these cannot be changed";  // const variable cannot be changed.
+        console.log(b);
+        //b = "I want to change but these gonna not change"; // if you try to change the content of const variable  then you get error.
+
+       // console.log(b);
+
+       // if -else
+
+       let age= 4;
+
+       if( age> 18){  //  we use if-else condition when we were creating the forms.
+           console.log("you can drink");
+       }
+       else if( age==2){
+           console.log("age is 2");
+       }
+       else if( age==4){
+           console.log("age is 4");
+       }
+       else{
+           console.log("you can drink cold drinks");
+       }
+
+       //switch case statement.
+        const cup = 45;
+       switch (cup) {
+           case 10:
+               console.log(" The value of cups is 10");
+               break;
+           case 20:
+
+               console.log(" The value of cups is 20");
+               break;
+           case 30:
+
+               console.log(" The value of cups is 30");
+               break;
+           case 45:
+
+               console.log(" The value of cups is 45");
+               break;
+       
+           default:
+           console.log(" The value of cups needed is none of given 10, 20, 30, 45 ");
+               break;
+       }
+
+       //switch case statement-2.
+        const tea = 10;
+       switch (tea) {
+           case 10:
+               console.log(" The value of tea is 10");
+               //break;
+           case 20:
+
+               console.log(" The value of tea is 20");
+               //break;
+           case 30:
+
+               console.log(" The value of tea is 30");
+               //break;
+           case 45:
+
+               console.log(" The value of tea is 45");
+               //break;
+       
+           default:
+           console.log(" The value of tea needed is none of given 10, 20, 30, 45 ");
+              // break;
+       }
+
+
+        
+    </script>
+</body>
+</html>

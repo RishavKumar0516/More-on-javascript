@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide navbar on scroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+    <div class="logo">Allen Parker</div>
+    <div id="navbar">
+       <a href="#">Home</a>
+       <a href="#">News</a>
+       <a href="#">Contacts</a>
+    </div>
+</div>
+
+<div class="content">
+    <h2>This Example Demonstrate how to hide a navbar when user scroll the page.</h2>
+    <h3>Scroll dowm this frame to see the effect.</h3>
+    <p>Scroll up to show navbar.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o
+    Duis  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+    fugiat nulla pariatur.
+    </p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+    Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen
+    book. It has survived not only .It is a long established fact that a reader
+    will be distracted by the readable content of a page when looking at its layout.
+    The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+    of letters, as opposed to using 'Content here, content here', making it look like
+    readable English. Many desktop.
+    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+    a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+    Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+    looked , up one of the more obscure Latin words, consectetur,
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o
+    Duis  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+    fugiat nulla pariatur.
+    </p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+    Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen
+    book. It has survived not only .It is a long established fact that a reader
+    will be distracted by the readable content of a page when looking at its layout.
+    The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+    of letters, as opposed to using 'Content here, content here', making it look like
+    readable English. Many desktop.
+    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+    a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+    Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+    looked , up one of the more obscure Latin words, consectetur,
+    </p>
+</div>
+
+
+<script>
+let prevScrollPos = window.pageYOffset;
+console.log("prevScrollPos" + prevScrollPos);
+window.onscroll = function(){
+    let currScrollPos = window.pageYOffset;
+    console.log("currScrollPos" + currScrollPos);
+    if(prevScrollPos > currScrollPos){
+        document.querySelector('.header').style.top = '0';
+    }
+    else{
+        document.querySelector('.header').style.top = '-80px';
+    }
+    prevScrollPos = currScrollPos;
+}
+</script>
+<!-- The pageXOffset and pageYOffset properties returns the pixels the current document has been scrolled from the upper left corner of the window, horizontally and vertically. -->
+</body>
+</html>

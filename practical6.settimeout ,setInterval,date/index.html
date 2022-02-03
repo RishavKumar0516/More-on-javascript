@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setinterval settimeout and date and time function</title>
+    <style>
+        .container{
+            width:100%;
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            align-items:center;
+            background:-webkit-linear-gradient(45deg,rgb(184, 96, 96),rgb(54, 153, 211));
+        }
+        .user{
+            width:80%;
+            background-color:rgb(25, 102, 146);
+            height:100px;
+        }
+        .setter{
+            width:80%;
+            background-color:rgb(25, 102, 146);
+            height:100px;
+        }
+        .section{
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            width:100%;
+            height:300px;
+          
+            
+        }
+        .box{
+            width:150px;
+            height:100px;
+            background:grey;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="user"></div>
+        <div class="setter"></div>
+        <div class="section">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+
+    <script>
+
+        // using the date and time with settimeout and setinterval.
+
+        setInterval(() => {
+            let top = document.querySelector(".user");
+            top.innerHTML = new Date();
+            top.style.color = "#fff";
+            top.style.fontSize = "30px";
+            top.style.textAlign = "center";
+            top.style.display = "flex";
+            top.style.justifyContent = "center";
+            top.style.alignItems = "center";
+            top.style.letterSpacing = "1px";
+
+        },1000);
+ //7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):
+        setInterval(() => {
+            
+        let hand =  document.querySelector(".setter");
+        let newdate = new Date("2021-07-11");
+         hand.innerHTML = newdate;
+         hand.style.color ="#fff";
+         let minute = newdate.getMinutes(); // these function returns you the minute from the Date object
+        
+         newdate.setMinutes(minute--);
+        }, 1000);
+ 
+    </script>
+
+</body>
+</html>

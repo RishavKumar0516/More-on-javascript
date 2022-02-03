@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setinterval and setTimeOut</title>
+</head>
+<body>
+    <div class="container">
+        This is a container
+    </div>
+
+
+    <script>
+        console.log("this is container");
+
+        /*
+         setTimeOut()   :-  The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds.
+         these allows us to run the function once after the interval of time.
+         these takes function name as input.
+
+Tip: 1000 ms = 1 second.
+
+Tip: The function is only executed once. If you need to repeat execution, use the setInterval() method.
+
+clearTimeOut() :-  allows us to run the function once after the interval of time.
+Tip: Use the clearTimeout() method to prevent the function from running.
+
+
+        */
+
+      function greet(){
+          console.log("good morning");
+      }
+
+      greet();
+      //setTimeout(greet, 5000);
+      setTimeout(greet, 5000);
+      /*setTimeout(greet(), 5000);  --> wrong as it is calling the function inside setTimeout.*/
+
+
+      function greet2(name){
+          console.log("good morning" + " " + name);
+      }
+      setTimeout(greet2, 5000, "rishav");
+
+      function greet3(name,byetext){
+          console.log("good morning" + " " + name + " " + byetext);
+      }
+      setTimeout(greet3, 7000, "rishav","good bye");
+
+ //-----------------clearTimeout()-----------------------
+
+      function greet4(name,byetext){
+          console.log("good morning" + " " + name + " " + byetext + " welcome");
+      }
+      let time = setTimeout(greet4, 7000, "rishav","good bye");//these function setTimeout returns special id or unique id. and  using these id, with clearTimeout(), we can clear the setTimeout.
+      console.log(time);
+
+      clearTimeout(time);
+
+
+      //------------setInterval---------------
+
+      /*
+      
+      setInterval   :-   The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
+
+The setInterval() method will continue calling the function until clearInterval() is called, or the window is closed.
+
+The ID value returned by setInterval() is used as the parameter for the clearInterval() method.
+
+Tip: 1000 ms = 1 second.
+
+Tip: To execute a function only once, after a specified number of milliseconds, use the setTimeout() method.
+      
+      
+      
+      */
+
+    function greeting(name){
+        console.log("happy good morning" + " " + name);
+    }
+    setInterval(greeting,1000,"Harry");
+
+
+    function greeting2(name,byetext){
+        console.log("happy good morning" + " " + name + " " + "byetext");
+    }
+    let time2 = setInterval(greeting2,1000,"Harry","good bye");//these function setInterval returns special id or unique id. and  using these id, with clearTimeout(), we can clear the setTimeout.
+    console.log(time2);
+    clearTimeout(time2);
+
+    </script>
+</body>
+</html>

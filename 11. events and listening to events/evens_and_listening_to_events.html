@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events and listening to events</title>
+    <style>
+        #btn{
+            padding:10px 14px;
+            background:red;
+            border:2px ridge black;
+            color:#FFF;
+            font-weight:bold;
+            letter-spacing:1px;
+            border-radius:8px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+
+     <!--
+         events :- HTML events are "things" that happen to HTML elements, It is a signal which says something happend.
+
+     An HTML button was clicked 
+     
+     popular events :-
+
+     click
+     contextmenu
+     mouseover / mouseout
+     mousedown / mouseup
+     mousemove
+
+     form events:-
+
+     submit
+     focus   //when we focus on input form
+
+     DOMContentLoaded  //these work when the content of html is loaded.
+
+     transitionend
+    -->
+
+    <div class="container">
+        <h1>these is my heading</h1>
+        <h3>IMPORTANT NOTE :- if you set id in the element then name of id act as a global variable for javascript,and you don't need to grab those element, you can directly access them in javascript</h3>
+        <p id="para">Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem 
+        Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+        unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only .It is a long established fact that a reader
+        will be distracted by the readable content of a page when looking at its layout.
+        The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+        of letters, as opposed to using 'Content here, content here', making it look like
+        readable English. Many desktop.
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+        a piece of classical Latin literature from 45 BC,making it over 2000 years old.
+        Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+        looked , up one of the more obscure Latin words, consectetur,  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o
+        Duis  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+        fugiat nulla pariatur.
+        
+        </p>
+    </div>
+    <button id="btn" onclick="togglehide()">ShowHide</button><!--
+        if you set id in the element then name of id act as a global variable,and you don't need to grab those element, you can directly access them. -->
+    <script>
+
+let para = document.getElementById('para');
+para.addEventListener('mouseover',function run(){/*addEventListener is a awesome property you can use these to listen any events and run any function .*/
+
+   // syntax:-element.addEventListener(eventname,function(){  ----   });
+
+   // alert('mouse inside paragraph');
+    console.log('mouse inside paragraph');
+
+});
+para.addEventListener('mouseout',function run(){/*addEventListener is a awesome property you can use these to listen any events .*/
+
+    //alert('Now mouse is outside the paragraph');
+    console.log('Now mouse is outside the paragraph');
+
+});
+
+
+//eventListener -lets understand these by example, if anybody place the mouseover the paragraph,then we want to get a alert that mouse inside para, so these can done by EventListener.
+
+        function togglehide(){
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+
+           //IMPORTANT NOTE  :-if you set id in the element then name of id act as a global variable for javascript,and you don't need to grab those element, you can directly access them. You can check these by commenting the above two lines code.
+
+            // to grab the css of element we use  
+            /*To change the style of an HTML element, use this syntax:
+
+      document.getElementById(id).style.property = new style or element.style.property  = value;
+
+      */
+            
+
+            //but if display is not none then set the value none, then set value to none.
+
+            if(para.style.display != 'none'){
+                para.style.display = 'none';
+            }
+                      // but if we click on the button again, we want the paragraph back.so setting display to block.
+             else{
+                para.style.display ='block';
+            }
+        }
+    </script>
+</body>
+</html>

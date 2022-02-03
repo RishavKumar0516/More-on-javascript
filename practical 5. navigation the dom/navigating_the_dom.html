@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation the DOM</title>
+    <style>
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;300;400;600;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .container{
+            width:100%;
+           display:flex;
+           justify-content:center;
+           align-items:center;
+
+           flex-direction: column;
+        }
+        .header{
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            align-items: center;
+            width:100%;
+            height:200px;
+            background:rgb(43, 226, 202);
+            font-size:40px;
+            font-family: 'Encode Sans SC', sans-serif;
+            font-weight:800;
+            color:crimson;
+
+        }
+        .navigation{
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+            align-items:flex-end;
+            width:100%;
+        }
+         li{
+             padding:8px 12px;
+             color:cornsilk;
+             background:crimson;
+             text-decoration:none;
+             list-style:none;
+             font-family:Georgia, 'Times New Roman', Times, serif;
+             font-size:15px;
+             font-weight:bold;
+        }
+        .image-section{
+            display:flex;
+            justify-content:space-between;
+            width:90%;
+            height:300px;
+        
+            margin-top:60px;
+        }
+        .image{
+            width:50%;
+            background:darkgray;
+            margin-right:20px;
+
+        }
+        img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            transition:5s ease-in-out;
+        }
+        .detail{
+            width:100%;
+            background:darkseagreen;
+            
+        }
+        #headline{
+            padding:10px 50px;
+            font-size:30px;
+        }
+        p{
+           padding: 30px 50px;
+           font-size:20px;
+           font-family: 'Roboto Condensed', sans-serif;
+           line-height:25px;
+           letter-spacing:1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header"> The Valley
+            <div class="navigation">
+                
+                    <li class="linked">Home</li>
+                    <li class="linked">About</li>
+                    <li class="linked">Gallery</li>
+                    <li class="linked">Contacts</li>
+                    <li class="linked">Services</li>
+                
+            </div>
+        </div>
+
+        <div class="image-section">
+            <div id="imeg" class="image">
+            <img id="pic" src="m3.jpg" alt="">
+            </div>
+            <div class="detail">
+                <h2 id="headline">The kanchanganja mountains</h2>
+                <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o
+                Duis  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                fugiat nulla pariatur.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+      let element1= document.getElementById("paragraph").style.color = "blue";
+      let sel4 = document.querySelectorAll('li');// these returns the li element in the form of object. so to make any changes we have to traverse or iterate the each element of object or arrays.
+
+      for(element of sel4){
+          element.style.border = "2px solid black";// adding border to li element.
+          element.style.borderRadius = "8px" ;// adding border-radius to li element.
+          element.style.boxShadow =" 0px 0px 1px 1px ";
+      }
+
+
+     
+     
+   //changing the image using event listener.
+
+
+       let x = document.getElementById("imeg");
+         x.addEventListener("mouseover", myFunction);
+         
+       function myFunction(){
+        document.querySelector('img').src="m2.jpg";
+       }
+
+       x.addEventListener("mouseout", myFunction2);
+      
+       function myFunction2(){
+        document.querySelector('img').src="m4.jpg";
+       
+       }
+
+
+       //   grabbing the element using class. class also returns the array of element.
+
+       let classes = document.getElementsByClassName('linked');
+
+       for(element of classes){
+           element.style.color="black";
+       }
+
+       //changing the headline using arrays and setInterval.
+
+       let arrays =["The Everest", "The mount K2", "The Himalays", "The mount Abu","The Mount Khanganja"];
+       let elements = document.getElementById("headline");
+       var index = 0;
+       function changeword(){
+
+         elements.innerHTML=arrays[index];
+         index++;
+         if(index>=arrays.length)
+         {
+            index=0;
+         }
+
+       }
+       setInterval("changeword()",2000);
+      
+
+    </script>
+</body>
+
+</html>

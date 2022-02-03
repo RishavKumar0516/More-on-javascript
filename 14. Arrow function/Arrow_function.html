@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+   <div class="container">
+       This is a arrow function
+   </div> 
+
+
+
+   <script>
+      function greet(){   
+          console.log("Good morning!");
+      }
+      greet();
+
+      // We can write the above code in sortcut using arrow function. using arrow function we can 
+      
+      greet2 = ()=> {   // These  ' ()=> '  called arrow function.
+
+      console.log("Good morning!");
+
+      }
+      greet2();
+
+      let sum = (a,b) =>{  //  creating an arrow function which takes input from the user and return sum of the number.
+          return a+b;
+      };
+      console.log(sum(30,45));// we are calling the arrow function and passing the value.
+
+
+
+      let product = (a,b) =>{//  creating an arrow function which takes input from the user and return product of the number.
+          return a*b;
+      };
+      let value = product(12,4);// we are calling the arrow function and passing the value.
+      console.log(value);
+
+
+      //  We can write the above arrow function in more shortcut way----
+
+      let sum2 = (a,b)=> a+b;  
+      /*           |      |
+            declearing   return
+             function    value
+      */
+      console.log(sum2(60,40));
+
+      let half = a => a/2;  // if you have only one argument then use these way.
+      console.log(half(45));
+
+      let byegreet = ()=>  console.log("good bye"); //if you have no any argument then,you can't remove the smaller brackets"()" but,you can remove the curly bracess"{}" if having single argument inside the function. 
+
+      byegreet();
+
+
+
+      // Where to use these arrow function :-
+
+
+      setTimeout(() => {  // Here in place of function name we are using arrow function
+        /*         |
+             arrow function   */
+          console.log("we are inside settimeout");
+      }, 3000);
+
+
+
+      // These is some important 
+      
+      /*
+      about this :-  In JavaScript, the thing called this is the object that "owns" the code.
+
+The value of this, when used in an object, is the object itself.
+*/
+
+      let obj1 = {
+          names: ["rishav", "rohan", "skillf","raunak"],
+          speak(){
+              this.names.forEach((student)=>{   // here running arrow function for each student, here student is formal argument of the function, which is taking the values of
+
+                  console.log("kuckdoo koo" + " " + student);
+
+              });  // " this " means the object inside which it is present.here "this" is inside the object obj1 so ,we are talking about the object obj1.
+          }
+      }
+      // you can use these above code for creating image slider.
+      obj1.speak();
+
+
+      let obj2 = {
+          greeting: "good bye, see you later",
+          names: ["rishav", "rohan", "skillf","raunak"],
+          speak(){
+              this.names.forEach((student)=>{  //The value of this, when used in an object, is the object itself.
+
+                  console.log(this.greeting + "kuckdoo koo" + " " + student);// by default kisi function ke andar ka "this", bahar wala "this " nahi hota hai, wo function ke andar wala "this" hi hota hai.
+                 // but here "this" is inside the arrow function, and speacility of arrow function is ,when "this" is inside the arrow function these "this" will point to the object which is outside the function and give the greeting property.
+
+
+              });  // " this " means the object inside which it is present.here "this" is inside the object obj1 so ,we are talking about the object obj1.
+          }
+      }
+      obj2.speak();
+
+
+      let obj3 = {
+          greeting: "good bye, see you later",
+          names: ["rishav", "rohan", "skillf","raunak"],
+          speak(){
+              this.names.forEach(function st(student){  //The value of this, when used in an object, is the object itself.
+
+                  console.log(this.greeting + " " + "kuckdoo koo" + " " + student);// by default kisi function ke andar ka "this", bahar wala "this " nahi hota hai, wo function ke andar wala "this" hi hota hai.
+                 // here we are not using arrow function, here we are using  the function like these "st()" ,so now "this" used inside the function  sp() will to point the function sp() and finding the greeting inside the function sp() . but here we have not defined any greeting so these will show "undefined".
+
+
+              }); 
+          }
+      }
+      obj3.speak();
+
+      /* conclusion :-  If using "this" keyword inside arrow function and arrow function inside any object, then the keyword "this" inside of arrow function will point to parent ,will point to the object  --- this called lexical this.
+      but, if not using the arrow function, then "this" keyword inside the function will point to the function inside which it is used.
+       
+      */
+
+   </script>
+
+
+
+</body>
+</html>

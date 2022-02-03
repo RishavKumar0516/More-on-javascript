@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in java script</title>
+</head>
+<body>
+     <div class="container">
+         this is a container
+     </div>
+ <script>
+    console.log('function');
+    let name = "Rishav";   // these is global variable.
+    let name1 = "Rahul";
+    let name2 = "Ravi";
+    let name3 = "Rishau";
+    let greettext = "good morning ";
+    let text = "good afternoon";
+    // printing using variable.
+     
+     console.log(name + " is a good boy");
+     console.log(name1 + " is a good boy");
+     console.log(name2 + " is a good boy");
+     console.log(name3 + " is a good boy");
+
+    // can we create a methods which output all the line of code in single code.
+    
+
+    function greet(name, greettext){
+
+        let name1 = "Name1";// these is local variable of the function, these will not change the content of global variable.
+        console.log(greettext + " " + name);
+        console.log(name + " is a good boy");// these will print the above code exactly waht it is, but these time we don't need to write " is a good boy " in every line.
+    }
+    // calling the function
+    greet(name, greettext);// passing argument to the function. 
+    greet(name1, greettext);
+    greet(name2, greettext);
+    greet(name3, greettext);
+    
+
+    function called(name, text = "greeting from javascript to"){
+
+        // here we have initialise the text with " greeting from javascript to"., but these will work only when we don't pass the argument from calling function.
+
+        // if we do not pass the value to the function then text will take the given initialize value and process them.
+
+
+        console.log(text + " " + name);
+        console.log(name + " is a good boy");// these will print the above code exactly waht it is, but these time we don't need to write " is a good boy " in every line.
+    }
+    // calling the function
+    called(name, text);// passing argument to the function. 
+    called(name1, text);
+    called(name2, );  // here we are not passing the second argument text to the function.
+    called(name3, );  // here we are not passing the second argument text to the function.
+    
+
+    //returning the value from the function
+
+    
+      let k = 34;
+      let l = 48;
+      let m = 18;
+
+    function sum(a, b, c){  // defining the function.
+        let d = a + b + c;
+        return d;  // afer calculating the value function returning the value.
+    }
+
+    let value1 = sum(k, l, m);  //   returned value get stored in variable value1.
+    console.log(value1);
+
+
+     value1 = sum(20, 34, 45);  //   returned value get stored in variable value1.
+    console.log(value1);
+
+</script>
+</body>
+</html>

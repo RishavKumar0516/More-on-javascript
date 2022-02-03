@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+    </div>
+
+    <script>
+        let greeting = ()=>{
+
+            console.log("Good Morning");
+
+        };
+
+        greeting();
+
+        //passing argument to the arrow function.
+        
+        let sum = (a, b)=>{
+            return a+b;
+        };
+        console.log(sum(40, 60));
+
+        let  half = a=>a/2;
+        console.log(half(40));
+
+        // arrow function with different methods.
+        
+        setTimeout(() => {
+            console.log("we are inside the loop");
+        }, 1000);
+
+        setInterval((name) => {
+
+            console.log(name + " "+ "is a good boy");
+            
+        }, 2000);
+
+        let obj = {
+            names : ["rishav", "ravi", "rahul","rishu","raunak"],
+        
+           
+        speak(){
+            this.names.forEach((student)=>{
+                  console.log("kuckdoo koo " + student);
+            });
+        }
+
+    }
+
+    obj.speak();
+
+    
+
+
+    </script>
+</body>
+</html>
